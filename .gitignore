@@ -1,0 +1,31 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+.DS_Store
+.ruff_cache/
+
+# Built from ~/sedra4sqlite via scripts/ensure_index.py
+data/peshitta.db
+data/*.db-*
+
+# release packages
+release/
+
+tests/.tmp/
+
+# local plugin / agent / editor state
+.remember/
+.cursor/
+AGENTS.md
+.claude/
+*.code-workspace
