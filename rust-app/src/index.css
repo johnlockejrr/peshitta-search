@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "@fontsource/noto-sans-syriac/400.css";
+@import "@fontsource/noto-sans-syriac/700.css";
+
+@theme {
+  --font-sans: "Noto Sans", "Segoe UI", sans-serif;
+  --font-syriac: "Noto Sans Syriac", "Segoe UI Historic", sans-serif;
+  --color-page: #ebf1fe;
+  --color-ink: #1c2638;
+}
+
+html {
+  background: var(--color-page);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Keep class name used throughout App.jsx; maps to Syriac face */
+.font-hebrew {
+  font-family: var(--font-syriac);
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: min(36rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  border: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--color-ink);
+  border-radius: 1rem;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.22);
+}
+
+dialog::backdrop {
+  background: rgba(15, 23, 42, 0.45);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}

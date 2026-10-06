@@ -15,7 +15,8 @@ htmlcov/
 .ruff_cache/
 
 # Built from ~/sedra4sqlite via scripts/ensure_index.py
-data/peshitta.db
+# data/peshitta.db is tracked for CI/releases
+# data/peshitta.db
 data/*.db-*
 
 # release packages
@@ -29,3 +30,12 @@ tests/.tmp/
 AGENTS.md
 .claude/
 *.code-workspace
+
+# desktop build artifacts (bundled DB under resources/ is tracked)
+rust-app/target/
+rust-app/dist/
+rust-app/node_modules/
+rust-app/src-tauri/target/
+rust-app/src-tauri/gen/
+
+release/
